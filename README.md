@@ -28,12 +28,14 @@ They allow developers to evolve the database schema as the application evolves, 
 Migrations provide a way to create, update, and manage the database schema based on the changes made to the entity models and the database context. 
 When you create a migration, EF Core generates code that represents the changes needed to update the database schema to match the current state of your models.
 
+for cli, you can use the following commands to create and apply migrations:
 ``` dotnet ef migrations add InitialCreate
 	dotnet ef database update
 ```
 
-``` dotnet ef migrations add InitialCreate``` - This command creates a new migration named "InitialCreate" based on the current state of the models and the database context.
-``` dotnet ef database update``` - This command applies the pending migrations to the database, updating the schema to match the current state of the models. It converts the migration code into SQL commands and executes them against the database to create or modify tables, columns, indexes, etc., as defined in the migration.
+for package manager console, you can use the following commands to create and apply migrations:
+``` add-migration InitialCreate``` - This command creates a new migration named "InitialCreate" based on the current state of the models and the database context.
+``` update-database``` - This command applies the pending migrations to the database, updating the schema to match the current state of the models. It converts the migration code into SQL commands and executes them against the database to create or modify tables, columns, indexes, etc., as defined in the migration.
 
 ### Code-first approach vs Database-first approach
 1. Code-first approach: 
