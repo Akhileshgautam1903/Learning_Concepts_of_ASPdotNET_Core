@@ -10,6 +10,7 @@ namespace Learning_Concepts_of_ASPdotNET_Core.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            Console.WriteLine("Response generated!!");
             return Ok("Controller reached successfully!");
         }
     }
