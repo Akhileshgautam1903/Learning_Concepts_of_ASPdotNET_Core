@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Learning_Concepts_of_ASPdotNET_Core.Controllers
 {
@@ -6,6 +7,7 @@ namespace Learning_Concepts_of_ASPdotNET_Core.Controllers
     [ApiController]
     public class SecureControllercs: ControllerBase
     {
+        [Authorize]
         [HttpGet]
         public IActionResult Secret()
         {
