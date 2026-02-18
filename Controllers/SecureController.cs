@@ -5,13 +5,13 @@ namespace Learning_Concepts_of_ASPdotNET_Core.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SecureControllercs: ControllerBase
+    public class SecureController : ControllerBase
     {
         [Authorize]
         [HttpGet]
-        public IActionResult Secret()
+        public IActionResult GetSecret()
         {
-            return Ok("You accessed protected route using COOKIE Auth");
+            return Ok("You accessed protected route using COOKIE auth!");
         }
     }
 }

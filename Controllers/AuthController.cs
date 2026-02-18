@@ -30,7 +30,7 @@ namespace Learning_Concepts_of_ASPdotNET_Core.Controllers
             return Ok("Logged in successfully");
         }
 
-        [HttpPost]
+        [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
