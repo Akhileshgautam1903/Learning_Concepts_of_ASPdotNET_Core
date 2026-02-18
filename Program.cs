@@ -16,6 +16,8 @@ builder.Services.AddSwaggerGen();
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
 
+// The AddAuthentication method configures the authentication services for the application, specifying that JWT Bearer authentication will be used as the default scheme for both authentication and challenge actions.
+// The AddJwtBearer method then sets up the JWT Bearer authentication handler, defining how incoming JWT tokens should be validated using the specified parameters such as issuer, audience, lifetime, and signing key.
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

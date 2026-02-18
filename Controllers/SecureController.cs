@@ -7,7 +7,7 @@ namespace Learning_Concepts_of_ASPdotNET_Core.Controllers
     [ApiController]
     public class SecureController : ControllerBase
     {
-        [Authorize]
+        [Authorize]     //Authorize attribute ensures that only authenticated users with a valid JWT can access this endpoint
         [HttpGet("data")]
         public IActionResult GetSecureData()
         {
